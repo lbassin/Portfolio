@@ -1,22 +1,9 @@
-import {Component, OnInit} from '@angular/core';
-import {HomeAnimations} from './home.animation';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  animations: HomeAnimations,
+  template: '<router-outlet></router-outlet>',
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
 
-  animationState: string;
-
-  ngOnInit(): void {
-    this.animationState = '';
-  }
-
-  getStartedAction(): void {
-    this.animationState = 'out';
-  }
 }
