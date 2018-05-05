@@ -1,13 +1,34 @@
-.background {
+.background-first {
   background: #1976d2 linear-gradient(145deg, #0d47a1, #42a5f5);
-  color: #fff;
 
   width: 100vw;
   height: 60vh;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+
   transform: translateZ(1px) skewY(9deg);
   transform-origin: 100%;
 
+  box-shadow: 0 7px 38px -12px rgba(0, 0, 0, 0.75);
+}
+
+.background-second {
+  background: #d2040b linear-gradient(145deg, #f45c43, #eb3349);
+
+  width: 83vw;
+  height: 100vh;
+
   position: absolute;
+  bottom: 0;
+  left: 35vh;
+  z-index: 10;
+
+  transform: skewX(-52deg);
+  transform-origin: 0 100%;
+
   box-shadow: 0 7px 38px -12px rgba(0, 0, 0, 0.75);
 }
 
@@ -20,6 +41,7 @@
   justify-content: space-between;
   align-content: flex-end;
   padding-top: 20vh;
+  z-index: 30;
 
   .photo {
     width: 40%;
@@ -28,7 +50,7 @@
     img {
       max-width: 100%;
       max-height: 100%;
-      border-radius: 50%;
+      border-radius: 35%;
     }
   }
 
@@ -71,6 +93,8 @@
   margin: auto;
   text-align: center;
   padding-top: 15vh;
+  position: relative;
+  z-index: 30;
 
   button {
     outline: none;
@@ -78,10 +102,10 @@
     font-weight: 600;
     padding: 12px 24px;
     border-radius: 48px;
-    background-color: #1976d2;
+    background-color: #ffffff;
     text-transform: uppercase;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
-    color: #ffffff;
+    color: #ef4d46  ;
     font-size: 1.2em;
     letter-spacing: 0.3px;
     cursor: pointer;
