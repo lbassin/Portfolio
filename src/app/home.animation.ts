@@ -1,7 +1,7 @@
 // import the required animation functions from the angular animations module
 import {trigger, animate, transition, style, keyframes, state} from '@angular/animations';
 
-export const NavAnimation = [
+export const HomeAnimations = [
   trigger('headerAnimation', [
       state('*', style({
         top: '50%',

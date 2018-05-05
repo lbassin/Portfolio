@@ -32,6 +32,21 @@
   box-shadow: 0 7px 38px -12px rgba(0, 0, 0, 0.75);
 }
 
+.background-third {
+  background: #ffffff;
+
+  width: 100vw;
+  height: 100vh;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+
+  transform: skewY(-38deg);
+  transform-origin: 35vh 100%;
+}
+
 .content {
   width: 40vw;
   height: 35vh;
@@ -105,7 +120,7 @@
     background-color: #ffffff;
     text-transform: uppercase;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
-    color: #ef4d46  ;
+    color: #ef4d46;
     font-size: 1.2em;
     letter-spacing: 0.3px;
     cursor: pointer;

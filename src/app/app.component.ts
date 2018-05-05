@@ -1,11 +1,12 @@
 import {Component, OnInit} from '@angular/core';
-import {NavAnimation} from './title.animation';
+import {HomeAnimations} from './home.animation';
 
 @Component({
   selector: 'app-root',
+
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  animations: NavAnimation,
+  animations: HomeAnimations,
 })
 export class AppComponent implements OnInit {
 
