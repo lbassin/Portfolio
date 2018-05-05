@@ -10,6 +10,13 @@ import {HomeAnimations} from './home.animation';
 })
 export class AppComponent implements OnInit {
 
+  animationState: string;
+
   ngOnInit(): void {
+    this.animationState = '';
+  }
+
+  getStartedAction(): void {
+    this.animationState = 'out';
   }
 }

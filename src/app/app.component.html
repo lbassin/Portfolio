@@ -1,14 +1,11 @@
-<div class="background-first">
+<div class="background-first" [@slideUp]="animationState">
+</div>
+<div class="background-second" [@slideDown]="animationState">
+</div>
+<div class="background-third" [@slideLeft]="animationState">
 </div>
 
-<div class="background-second">
-</div>
-
-<div class="background-third">
-</div>
-
-
-<div class="content">
+<div class="content" [@fadeIn]="animationState">
   <div class="photo">
     <img src="assets/laurentbassin.svg" alt="">
   </div>
@@ -19,6 +16,6 @@
     </div>
   </div>
   <div class="start">
-    <button>Get started</button>
+    <button (click)="getStartedAction()">Get started</button>
   </div>
 </div>
