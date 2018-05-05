@@ -2,43 +2,49 @@
 import {trigger, animate, transition, style, keyframes, state} from '@angular/animations';
 
 export const HomeAnimations = [
-  trigger('headerAnimation', [
-      state('*', style({
-        top: '50%',
-        left: '50%',
+  trigger('fadeIn', [
+      state('void', style({
+        opacity: 0
       })),
 
-      state('moveTitle', style({
-        top: '1%',
-        left: '15%',
-        transform: 'translateX(0)',
-        textAlign: 'left',
-        fontSize: '2.5em',
-        width: '70%'
+      state('out', style({
+        opacity: 0
       })),
 
-      transition(':enter', animate('0.4s 400ms', keyframes([
-        style({
-          opacity: 0,
-          offset: 0,
-        }),
-        style({
-          opacity: 1,
-          offset: 1,
-        }),
-      ]))),
-
-      transition('* => moveTitle', animate('0.4s 400ms')),
+      transition(':enter', animate('0.6s 400ms ease-out', keyframes([
+          style({opacity: 0, offset: 0}),
+          style({opacity: 1, offset: 1}),
+        ])
+      )),
+      transition('* => out', animate('1.2s')),
     ]
   ),
-  trigger('headerWrapperAnimation', [
-    state('*', style({
+  trigger('slideUp', [
+    state('void', style({})),
+
+    state('out', style({
+      top: '-100vh'
     })),
 
-    state('moveBackground', style({
-      height: '20vh',
+    transition('* => out', animate('1.2s')),
+  ]),
+  trigger('slideLeft', [
+    state('void', style({})),
+
+    state('out', style({
+      top: '-100vh',
+      left: '-100vh'
     })),
 
-    transition('* => moveBackground', animate('0.4s 600ms')),
+    transition('* => out', animate('1.2s')),
+  ]),
+  trigger('slideDown', [
+    state('void', style({})),
+
+    state('out', style({
+      bottom: '-100vh'
+    })),
+
+    transition('* => out', animate('1.2s')),
   ])
 ];
