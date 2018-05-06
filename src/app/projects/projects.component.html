@@ -1,0 +1,15 @@
+<div class="header">
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda debitis dignissimos ex iure,
+    laborum libero nisi non numquam praesentium quasi recusandae repellendus, similique sit. Autem dolorum
+    exercitationem ipsa sed vero?
+  </p>
+</div>
+
+<div class="projects">
+  <app-card *ngFor="let project of projects" [expanded]="expanded == project">
+    <div (click)="toggleProject(project)">
+      <img [src]="project.image" [alt]="project.name">
+    </div>
+  </app-card>
+</div>
