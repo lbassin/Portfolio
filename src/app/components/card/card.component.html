@@ -2,12 +2,21 @@
   <ng-content></ng-content>
 </div>
 <div class="card-details" *ngIf="expanded" [@expandCard]="expanded" [ngClass]="{'expanded': expanded}">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam, aliquid atque cum cumque, dolorem dolorum
-  fuga harum hic in iste minus pariatur quibusdam recusandae reprehenderit soluta vitae. Ducimus, iusto!
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam, aliquid atque cum cumque, dolorem dolorum
-  fuga harum hic in iste minus pariatur quibusdam recusandae reprehenderit soluta vitae. Ducimus, iusto!
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam, aliquid atque cum cumque, dolorem dolorum
-  fuga harum hic in iste minus pariatur quibusdam recusandae reprehenderit soluta vitae. Ducimus, iusto!
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam, aliquid atque cum cumque, dolorem dolorum
-  fuga harum hic in iste minus pariatur quibusdam recusandae reprehenderit soluta vitae. Ducimus, iusto!
+  <h4>{{ project.name }}</h4>
+  <div class="image-container">
+    <img [src]="project.image" alt="">
+  </div>
+  <div class="project-details">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet autem deserunt eaque exercitationem fugiat
+      incidunt, ipsam mollitia nobis quidem repellendus repudiandae saepe sapiente. Ab, doloribus excepturi explicabo
+      mollitia natus velit.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet autem deserunt eaque exercitationem fugiat
+      incidunt, ipsam mollitia nobis quidem repellendus repudiandae saepe sapiente. Ab, doloribus excepturi explicabo
+      mollitia natus velit.
+    </p>
+    <div>
+      <button>Démo</button>
+    </div>
+  </div>
 </div>

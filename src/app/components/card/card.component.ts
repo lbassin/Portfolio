@@ -13,5 +13,6 @@ export class CardComponent {
   @Input() expanded: boolean;
   @Input() blur = true;
   @Input() project: IProject;
+  @Input() toggleFunction;
 
 }

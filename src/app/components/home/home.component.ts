@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HomeAnimations } from './home.animation';
-import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   templateUrl: 'home.component.html',
@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
   animationState: string;
 
-  constructor(private router: Router) {
+  constructor(private location: Location) {
   }
 
   ngOnInit(): void {
@@ -19,9 +19,6 @@ export class HomeComponent implements OnInit {
 
   getStartedAction(): void {
     this.animationState = 'out';
-
-    setTimeout(() => {
-      this.router.navigate(['/projects']);
-    }, 1000);
+    this.location.replaceState('/projects');
   }
 }

@@ -1,8 +1,10 @@
-<div class="background-first" [@slideUp]="animationState">
-</div>
-<div class="background-second" [@slideDown]="animationState">
-</div>
-<div class="background-third" [@slideLeft]="animationState">
+<div class="background-wrapper">
+  <div class="background-first" [@slideUp]="animationState">
+  </div>
+  <div class="background-second" [@slideDown]="animationState">
+  </div>
+  <div class="background-third" [@slideLeft]="animationState">
+  </div>
 </div>
 
 <div class="content" [@fadeIn]="animationState">
@@ -20,6 +22,6 @@
   </div>
 </div>
 
-<div class="body">
+<div class="body" [ngClass]="{'auto-height': animationState === 'out'}">
   <app-projects></app-projects>
 </div>

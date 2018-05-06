@@ -10,7 +10,8 @@ export const HomeAnimations = [
       })),
 
       state('out', style({
-        opacity: 0
+        opacity: 0,
+        display: 'none',
       })),
 
       transition(':enter', animate('0.6s 400ms ease-out', keyframes([

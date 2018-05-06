@@ -233,3 +233,21 @@ button {
     }
   }
 }
+
+.background-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.body {
+  height: calc(100vh - 108px);
+  overflow: hidden;
+
+  &.auto-height {
+    height: auto;
+  }
+}
