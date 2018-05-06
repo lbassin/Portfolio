@@ -1,12 +1,26 @@
 :host {
   margin-bottom: 3vh;
 
+  &:nth-last-of-type(3n+1) .card-details {
+    &:before {
+      left: 15%;
+    }
+  }
+
   &:nth-of-type(3n+2) .card-details {
     margin-left: -100%;
+
+    &:before {
+      left: 48%;
+    }
   }
 
   &:nth-of-type(3n+3) .card-details {
     margin-left: -200%;
+
+    &:before {
+      right: 15%;
+    }
   }
 }
 
@@ -37,6 +51,19 @@
   color: #fff;
   padding: 12px;
   box-sizing: border-box;
+
+  &:before {
+    content: "";
+    opacity: 1;
+    display: block;
+    height: 0;
+    width: 0;
+    margin-top: -27px;
+    position: absolute;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid #333a45;
+  }
 }
 
 /deep/ img {

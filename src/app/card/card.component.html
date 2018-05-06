@@ -1,7 +1,7 @@
-<div class="card" [ngClass]="blur ? 'blur' : ''">
+<div class="card" [ngClass]="{'blur' : blur}">
   <ng-content></ng-content>
 </div>
-<div class="card-details" *ngIf="expanded" [@expandCard]="expanded">
+<div class="card-details" *ngIf="expanded" [@expandCard]="expanded" [ngClass]="{'expanded': expanded}">
   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam, aliquid atque cum cumque, dolorem dolorum
   fuga harum hic in iste minus pariatur quibusdam recusandae reprehenderit soluta vitae. Ducimus, iusto!
   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam, aliquid atque cum cumque, dolorem dolorum
