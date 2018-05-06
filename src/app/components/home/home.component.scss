@@ -136,6 +136,11 @@ button {
   font-size: 1.2em;
   letter-spacing: 0.3px;
   cursor: pointer;
+
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: translateY(-8px);
+  }
 }
 
 @media screen and (max-width: 1600px) {
