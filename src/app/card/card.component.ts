@@ -10,7 +10,8 @@ import { IProject } from '../IProject';
 })
 export class CardComponent {
 
-  @Input() expanded: IProject = null;
+  @Input() expanded: boolean;
   @Input() blur = true;
+  @Input() project: IProject;
 
 }

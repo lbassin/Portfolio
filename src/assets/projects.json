@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Djingo Série",
+    "image": "https://dummyimage.com/300x240",
+    "caption": "Chatbot, Angular, Node"
+  },
+  {
+    "name": "Boilerplate",
+    "image": "https://dummyimage.com/240x300",
+    "caption": "Electron, Webpack, Angular"
+  },
+  {
+    "name": "Octy",
+    "image": "https://dummyimage.com/120x120",
+    "caption": "Docker, Angular"
+  }
+]

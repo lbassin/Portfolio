@@ -8,6 +8,8 @@ import { RouterModule } from '@angular/router';
 import { routes } from './app.routes';
 import { ProjectsComponent } from './projects/projects.component';
 import { CardComponent } from './card/card.component';
+import { ProjectsService } from './services/projects.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -20,9 +22,12 @@ import { CardComponent } from './card/card.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    ProjectsService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -1,13 +1,13 @@
 :host {
   margin-bottom: 3vh;
 
-  &:nth-last-of-type(3n+1) .card-details {
+  &:nth-last-of-type(1n) .card-details {
     &:before {
       left: 15%;
     }
   }
 
-  &:nth-of-type(3n+2) .card-details {
+  &:nth-of-type(2n) .card-details {
     margin-left: -100%;
 
     &:before {
@@ -15,11 +15,11 @@
     }
   }
 
-  &:nth-of-type(3n+3) .card-details {
+  &:nth-of-type(3n) .card-details {
     margin-left: -200%;
 
     &:before {
-      right: 15%;
+      left: 82%;
     }
   }
 }
@@ -66,7 +66,25 @@
   }
 }
 
-/deep/ img {
-  max-width: 100%;
-  max-height: 100%;
+/deep/ {
+  .image-container {
+    height: 210px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+    }
+  }
+
+  h3 {
+    padding-top: 10px;
+  }
+
+  p {
+    padding-top: 6px;
+  }
 }
+
+

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IProject } from '../IProject';
+import { ProjectsService } from '../services/projects.service';
 
 @Component({
   selector: 'app-projects',
@@ -11,13 +12,12 @@ export class ProjectsComponent implements OnInit {
   projects: Array<IProject>;
   expanded: IProject;
 
+  constructor(private projectsService: ProjectsService) {
+  }
+
   ngOnInit(): void {
-    this.projects = [
-      {name: 'ok', image: 'https://dummyimage.com/240x240'},
-      {name: 'ok', image: 'https://dummyimage.com/240x240'},
-      {name: 'ok', image: 'https://dummyimage.com/240x240'},
-      {name: 'ok', image: 'https://dummyimage.com/240x240'},
-    ];
+    this.projects = [];
+    this.projectsService.getAll().then(projects => this.projects = projects);
   }
 
   toggleProject(project: IProject): void {

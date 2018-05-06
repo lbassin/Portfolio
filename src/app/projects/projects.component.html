@@ -9,9 +9,15 @@
 <div class="projects">
   <app-card *ngFor="let project of projects"
             [expanded]="expanded == project"
-            [blur]="expanded  && expanded !== project">
+            [blur]="expanded  && expanded !== project"
+            [project]="project"
+  >
     <div (click)="toggleProject(project)">
-      <img [src]="project.image" [alt]="project.name">
+      <div class="image-container">
+        <img [src]="project.image" [alt]="project.name">
+      </div>
+      <h3>{{ project.name }}</h3>
+      <p>{{ project.caption }}</p>
     </div>
   </app-card>
 </div>
