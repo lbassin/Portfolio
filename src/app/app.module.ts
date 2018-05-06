@@ -3,11 +3,11 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './components/home/home.component';
 import { RouterModule } from '@angular/router';
 import { routes } from './app.routes';
-import { ProjectsComponent } from './projects/projects.component';
-import { CardComponent } from './card/card.component';
+import { ProjectsComponent } from './components/projects/projects.component';
+import { CardComponent } from './components/card/card.component';
 import { ProjectsService } from './services/projects.service';
 import { HttpClientModule } from '@angular/common/http';
 

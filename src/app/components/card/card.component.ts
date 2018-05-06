@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CardAnimations } from './card.animation';
-import { IProject } from '../IProject';
+import { IProject } from '../../models/IProject';
 
 @Component({
   selector: 'app-card',
