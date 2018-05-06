@@ -1,12 +1,12 @@
 .background-first {
   background: #1976d2 linear-gradient(145deg, #0d47a1, #42a5f5);
 
-  width: 100vw;
+  width: 220vw;
   height: 60vh;
 
   position: absolute;
   top: 0;
-  left: 0;
+  left: -120vw;
   z-index: 20;
 
   transform: translateZ(1px) skewY(9deg);

@@ -30,3 +30,56 @@ nav {
   }
 }
 
+.background-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+
+  .background-one {
+    position: absolute;
+    width: 38vw;
+    height: 26vh;
+    right: -8vw;
+    top: -16vh;
+
+    transform: translateZ(1px) skewY(9deg);
+    transform-origin: 100%;
+
+    background: #1976d2 linear-gradient(145deg, #0d47a1, #42a5f5);
+
+    box-shadow: 0 7px 38px -12px rgba(0, 0, 0, 0.75);
+  }
+
+  .background-two {
+    position: absolute;
+    width: 15vw;
+    height: 25vh;
+    right: 0;
+    bottom: 0;
+
+    transform: skewX(-52deg);
+    transform-origin: 0 100%;
+
+    background: #d2040b linear-gradient(145deg, #f45c43, #eb3349);
+
+    box-shadow: 0 7px 38px -12px rgba(0, 0, 0, 0.75);
+  }
+
+  .background-three {
+    position: absolute;
+    width: 20vw;
+    height: 27vh;
+    top: -34vh;
+    left: 0;
+
+    transform: skewY(-38deg);
+    transform-origin: 100% 100%;
+
+    background: #fff;
+
+    box-shadow: 0 7px 38px -12px rgba(0, 0, 0, 0.75);
+  }
+}
