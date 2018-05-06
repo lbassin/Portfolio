@@ -17,7 +17,11 @@
   background: #fff;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.06);
   text-align: center;
-  transition: transform 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+
+  &.blur {
+    opacity: 0.3;
+  }
 
   &:hover {
     cursor: pointer;

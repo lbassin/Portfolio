@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CardAnimations } from './card.animation';
+import { IProject } from '../IProject';
 
 @Component({
   selector: 'app-card',
@@ -7,11 +8,9 @@ import { CardAnimations } from './card.animation';
   styleUrls: ['card.component.scss'],
   animations: CardAnimations,
 })
-export class CardComponent implements OnInit {
+export class CardComponent {
 
-  @Input() expanded = null;
+  @Input() expanded: IProject = null;
+  @Input() blur = true;
 
-  ngOnInit(): void {
-    this.expanded = false;
-  }
 }

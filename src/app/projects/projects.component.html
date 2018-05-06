@@ -7,7 +7,9 @@
 </div>
 
 <div class="projects">
-  <app-card *ngFor="let project of projects" [expanded]="expanded == project">
+  <app-card *ngFor="let project of projects"
+            [expanded]="expanded == project"
+            [blur]="expanded  && expanded !== project">
     <div (click)="toggleProject(project)">
       <img [src]="project.image" [alt]="project.name">
     </div>
