@@ -29,7 +29,8 @@ export const HomeAnimations = [
       width: '38vw',
       height: '26vh',
       top: '-16vh',
-      left: '70vw'
+      left: '70vw',
+      boxShadow: 'none',
     })),
 
     transition('* => out', animate(timing)),
@@ -40,8 +41,9 @@ export const HomeAnimations = [
     state('out', style({
       width: '20vw',
       height: '27vh',
-      top: '-34vh',
-      left: '0vh'
+      top: '-39vh',
+      left: '0vh',
+      boxShadow: 'none',
     })),
 
     transition('* => out', animate(timing)),
@@ -51,7 +53,8 @@ export const HomeAnimations = [
 
     state('out', style({
       left: '80vw',
-      bottom: '-6vh'
+      bottom: '-8vh',
+      boxShadow: 'none',
     })),
 
     transition('* => out', animate(timing)),

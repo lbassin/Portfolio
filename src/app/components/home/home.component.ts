@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { HomeAnimations } from './home.animation';
 import { Location } from '@angular/common';
 
@@ -8,9 +8,12 @@ import { Location } from '@angular/common';
   animations: HomeAnimations,
 })
 export class HomeComponent implements OnInit {
+
+  @ViewChild('backgroundWrapper') backgroundWrapper;
+
   animationState: string;
 
-  constructor(private location: Location) {
+  constructor(private location: Location, private renderer: Renderer2) {
   }
 
   ngOnInit(): void {
@@ -19,6 +22,9 @@ export class HomeComponent implements OnInit {
 
   getStartedAction(): void {
     this.animationState = 'out';
-    this.location.replaceState('/projects');
+    setTimeout(() => {
+      this.renderer.setStyle(this.backgroundWrapper.nativeElement, 'opacity', '0');
+    }, 700);
+    // this.location.replaceState('/projects');
   }
 }

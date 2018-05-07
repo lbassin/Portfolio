@@ -3,9 +3,14 @@
   width: 55%;
 
   color: #333;
+
+  //position: relative;
+  z-index: 8;
 }
 
 nav {
+  position: relative;
+  z-index: 9;
   display: flex;
   justify-content: space-between;
 
@@ -40,7 +45,7 @@ nav {
 
   .background-one {
     position: absolute;
-    width: 38vw;
+    width: 64vw;
     height: 26vh;
     right: -8vw;
     top: -16vh;
