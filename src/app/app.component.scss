@@ -11,26 +11,48 @@
 nav {
   position: relative;
   z-index: 9;
-  display: flex;
-  justify-content: space-between;
 
-  line-height: 80px;
-  margin-bottom: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 80px;
 
   h1 {
     font-size: 2.2em;
     font-weight: 600;
   }
 
-  ul {
-    list-style: none;
-    display: flex;
-
-    li {
-      margin: 0 8px;
-      padding: 0 8px;
+  div {
+    padding-top: 2px;
+    p {
+      box-sizing: border-box;
+      display: inline-block;
       font-size: 1.2em;
       cursor: pointer;
+      padding: 0 12px;
+
+      &:hover {
+        span:after {
+          width: 100%;
+        }
+      }
+
+      span {
+        position: relative;
+        &:after {
+          position: absolute;
+          left: 0;
+          content: '';
+          height: 1px;
+          background: #222;
+          transition: all 0.4s ease-in-out;
+          width: 0;
+          bottom: -3px;
+        }
+      }
+
     }
   }
 }

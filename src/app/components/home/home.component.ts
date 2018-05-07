@@ -1,4 +1,4 @@
-import { Component, HostBinding, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { Component, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { HomeAnimations } from './home.animation';
 import { Location } from '@angular/common';
 
@@ -25,6 +25,6 @@ export class HomeComponent implements OnInit {
     setTimeout(() => {
       this.renderer.setStyle(this.backgroundWrapper.nativeElement, 'opacity', '0');
     }, 700);
-    // this.location.replaceState('/projects');
+    this.location.replaceState('/projects');
   }
 }
