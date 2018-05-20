@@ -18,7 +18,22 @@
       }
     ],
     "images": [
-
+      {
+        "path": "assets/projects/djingo/djingo_01.jpg",
+        "caption": "Altenative texte"
+      },
+      {
+        "path": "assets/projects/djingo/djingo_02.jpg",
+        "caption": "Altenative texte"
+      },
+      {
+        "path": "assets/projects/djingo/djingo_03.jpg",
+        "caption": "Altenative texte"
+      },
+      {
+        "path": "assets/projects/djingo/djingo_04.jpg",
+        "caption": "Altenative texte"
+      }
     ]
   },
   {
