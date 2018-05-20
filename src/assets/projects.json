@@ -45,6 +45,20 @@
         "label": "Github",
         "url": "https://github.com/lbassin/electron-angular-webpack"
       }
+    ],
+    "images": [
+      {
+        "path": "assets/projects/boilerplate/boilerplate_01.jpg",
+        "caption": "Alternative texte"
+      },
+      {
+        "path": "assets/projects/boilerplate/boilerplate_02.jpg",
+        "caption": "Alternative texte"
+      },
+      {
+        "path": "assets/projects/boilerplate/boilerplate_03.jpg",
+        "caption": "Alternative texte"
+      }
     ]
   },
   {
@@ -60,6 +74,7 @@
         "label": "Demo",
         "url": "https://okty.io/"
       }
-    ]
+    ],
+    "images": []
   }
 ]
