@@ -1,12 +1,12 @@
 [
   {
     "name": "Djingo Série",
-    "image": "https://dummyimage.com/300x240",
+    "image": "assets/djingo.png",
     "caption": "Chatbot, Angular, Node"
   },
   {
     "name": "Boilerplate",
-    "image": "https://dummyimage.com/240x300",
+    "image": "assets/boilerplate.png",
     "caption": "Electron, Webpack, Angular"
   },
   {
