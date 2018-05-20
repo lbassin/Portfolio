@@ -99,6 +99,10 @@
       bottom: 6px;
       right: 6px;
 
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+
       button {
         outline: none;
         border: none;
@@ -111,6 +115,8 @@
         color: #3481d5;
         font-size: 1em;
         cursor: pointer;
+
+        margin: 0 8px;
 
         transition: transform 0.3s ease-in-out;
         &:hover {
@@ -170,10 +176,8 @@
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
   .card-details {
-    width: 100%;
-
     .project-details {
       width: 100%;
     }
@@ -181,6 +185,12 @@
     .image-container {
       width: 100%;
     }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .card-details {
+    width: 100%;
   }
 
   :host {
@@ -210,3 +220,14 @@
   }
 }
 
+@media screen and (max-width: 540px) {
+  .card-details .project-details {
+    padding-bottom: 108px;
+
+    div {
+      button {
+        margin-bottom: 12px;
+      }
+    }
+  }
+}

@@ -16,7 +16,9 @@
       mollitia natus velit.
     </p>
     <div>
-      <button>Démo</button>
+      <a *ngFor="let link of project.links" [href]="link.url">
+        <button>{{ link.label }}</button>
+      </a>
     </div>
   </div>
 </div>
