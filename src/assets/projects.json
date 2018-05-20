@@ -2,16 +2,46 @@
   {
     "name": "Djingo Série",
     "image": "assets/djingo.png",
-    "caption": "Chatbot, Angular, Node"
+    "caption": "Chatbot, Angular, Node",
+    "links": [
+      {
+        "label": "Client",
+        "url": "https://github.com/lbassin/ESGI4_Hackathon_Client"
+      },
+      {
+        "label": "Serveur",
+        "url": "https://github.com/lbassin/ESGI4_Hackathon_Server"
+      },
+      {
+        "label": "Demo",
+        "url": "#"
+      }
+    ]
   },
   {
     "name": "Boilerplate",
     "image": "assets/boilerplate.png",
-    "caption": "Electron, Webpack, Angular"
+    "caption": "Electron, Webpack, Angular",
+    "links": [
+      {
+        "label": "Github",
+        "url": "https://github.com/lbassin/electron-angular-webpack"
+      }
+    ]
   },
   {
-    "name": "Octy",
-    "image": "https://dummyimage.com/120x120",
-    "caption": "Docker, Angular"
+    "name": "Okty",
+    "image": "assets/okty.png",
+    "caption": "Docker, Angular",
+    "links": [
+      {
+        "label": "Github",
+        "url": "https://github.com/lbassin/okty"
+      },
+      {
+        "label": "Demo",
+        "url": "https://okty.io/"
+      }
+    ]
   }
 ]
