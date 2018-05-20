@@ -1,7 +1,7 @@
 [
   {
     "name": "Djingo Série",
-    "image": "assets/djingo.png",
+    "thumbnail": "assets/projects/djingo.png",
     "caption": "Chatbot, Angular, Node",
     "links": [
       {
@@ -16,11 +16,14 @@
         "label": "Demo",
         "url": "#"
       }
+    ],
+    "images": [
+
     ]
   },
   {
     "name": "Boilerplate",
-    "image": "assets/boilerplate.png",
+    "thumbnail": "assets/projects/boilerplate.png",
     "caption": "Electron, Webpack, Angular",
     "links": [
       {
@@ -31,7 +34,7 @@
   },
   {
     "name": "Okty",
-    "image": "assets/okty.png",
+    "thumbnail": "assets/projects/okty.png",
     "caption": "Docker, Angular",
     "links": [
       {

@@ -4,7 +4,7 @@
 <div class="card-details" *ngIf="expanded" [@expandCard]="expanded" [ngClass]="{'expanded': expanded}">
   <h4>{{ project.name }}</h4>
   <div class="image-container">
-    <img [src]="project.image" alt="">
+    <img [src]="project.thumbnail" alt="">
   </div>
   <div class="project-details">
     <p>
