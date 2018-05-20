@@ -23,6 +23,9 @@ export class CardComponent {
     const source = event.target;
     const sourcePosition = source.getBoundingClientRect();
 
+    const overlay: HTMLDivElement = this.renderer.createElement('div');
+    this.renderer.addClass(overlay, 'overlay-zoom');
+
     const image: HTMLImageElement = this.renderer.createElement('img');
     image.src = source.src;
 
@@ -30,19 +33,23 @@ export class CardComponent {
     this.renderer.setStyle(image, 'top', sourcePosition.top + 'px');
     this.renderer.setStyle(image, 'left', sourcePosition.left + 'px');
     this.renderer.setStyle(image, 'width', sourcePosition.width + 'px');
-
-    this.renderer.appendChild(this.cardDetail.nativeElement, image);
     this.renderer.addClass(source, 'hide');
+
+    this.renderer.appendChild(this.cardDetail.nativeElement, overlay);
+    this.renderer.appendChild(this.cardDetail.nativeElement, image);
 
     setTimeout(() => {
       this.renderer.addClass(image, 'move');
+      this.renderer.addClass(overlay, 'visible');
 
       const closeListener = this.renderer.listen('body', 'click', () => {
         this.renderer.removeClass(image, 'move');
+        this.renderer.removeClass(overlay, 'visible');
         closeListener(); // Remove listener
 
         setTimeout(() => {
           this.renderer.removeChild(this.cardDetail.nativeElement, image);
+          this.renderer.removeChild(this.cardDetail.nativeElement, overlay);
           this.renderer.removeClass(source, 'hide');
         }, 350);
       });

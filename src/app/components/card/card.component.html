@@ -4,7 +4,7 @@
 <div class="card-details" *ngIf="expanded" [@expandCard]="expanded" [ngClass]="{'expanded': expanded}" #cardDetail>
   <h4>{{ project.name }}</h4>
   <div class="image-container">
-    <img [src]="project.images[0].path" [alt]="project.images[0].caption" (click)="zoomImage($event)">
+    <img [src]="project.images[0].path" [alt]="project.images[0].caption" (click)="zoomImage($event)" class="main-image">
     <div class="others">
       <img *ngFor="let image of project.images | slice:1"
            [src]="image.path"
