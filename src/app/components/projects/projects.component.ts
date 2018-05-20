@@ -11,6 +11,7 @@ export class ProjectsComponent implements OnInit {
 
   projects: Array<IProject>;
   expanded: IProject;
+  age: any;
 
   constructor(private projectsService: ProjectsService) {
   }
@@ -18,6 +19,8 @@ export class ProjectsComponent implements OnInit {
   ngOnInit(): void {
     this.projects = [];
     this.projectsService.getAll().then(projects => this.projects = projects);
+
+    this.initAge();
   }
 
   toggleProject(project: IProject): void {
@@ -35,5 +38,14 @@ export class ProjectsComponent implements OnInit {
     }
 
     this.expanded = project;
+  }
+
+  private initAge(): void {
+    const currentDate: number = new Date().getTime();
+    const birthDate: number = new Date('1996-08-14').getTime();
+    const numberOfMillisecondInAYear = 31557600000;
+
+    this.age = (currentDate - birthDate) / numberOfMillisecondInAYear;
+    this.age = Math.floor(this.age);
   }
 }
