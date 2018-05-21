@@ -26,10 +26,11 @@ export const HomeAnimations = [
     state('void', style({})),
 
     state('out', style({
-      width: '38vw',
+      width: '106vw',
       height: '26vh',
-      top: '-16vh',
-      left: '70vw',
+      top: '-13vh',
+      left: '-4vw',
+      transform: 'translateZ(1px) skewY(14deg)',
       boxShadow: 'none',
     })),
 
@@ -41,7 +42,7 @@ export const HomeAnimations = [
     state('out', style({
       width: '20vw',
       height: '27vh',
-      top: '-39vh',
+      top: '-53vh',
       left: '0vh',
       boxShadow: 'none',
     })),

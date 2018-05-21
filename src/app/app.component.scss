@@ -58,7 +58,7 @@ nav {
 }
 
 .background-wrapper {
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
@@ -67,12 +67,12 @@ nav {
 
   .background-one {
     position: absolute;
-    width: 64vw;
+    width: 101vw;
     height: 26vh;
-    right: -8vw;
-    top: -16vh;
+    right: -1vw;
+    top: -13vh;
 
-    transform: translateZ(1px) skewY(9deg);
+    transform: translateZ(1px) skewY(14deg);
     transform-origin: 100%;
 
     background: #1976d2 linear-gradient(145deg, #0d47a1, #42a5f5);
