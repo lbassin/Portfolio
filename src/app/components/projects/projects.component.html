@@ -7,10 +7,11 @@
 </div>
 
 <div class="projects">
-  <app-card *ngFor="let project of projects"
+  <app-card *ngFor="let project of projects; let i = index;"
             [expanded]="expanded == project"
             [blur]="expanded  && expanded !== project"
             [project]="project"
+            [@fadeIn]="cardState[i]"
   >
     <div (click)="toggleProject(project)">
       <div class="image-container">
