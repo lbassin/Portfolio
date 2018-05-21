@@ -277,6 +277,7 @@
   z-index: 40;
   transition: all 0.4s ease-in-out;
   cursor: pointer;
+  object-fit: scale-down;
 
   &.move {
     top: 50% !important;
