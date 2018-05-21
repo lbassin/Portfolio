@@ -49,9 +49,9 @@ export class ProjectsComponent implements OnInit {
       this.cardState = [];
       this.projects.forEach((project: IProject, index: number) => {
         this.cardState[index] = 'void';
+
         setTimeout(() => {
           this.cardState[index] = 'show';
-          console.log(this.cardState);
         }, 100 + (200 * index));
       });
     });
