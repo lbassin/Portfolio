@@ -1,7 +1,7 @@
 // import the required animation functions from the angular animations module
 import { trigger, animate, transition, style, keyframes, state } from '@angular/animations';
 
-const timing = '0.7s cubic-bezier(.36,.55,.66,.97)';
+const timing = '0.5s cubic-bezier(.36,.55,.66,.97)';
 
 export const HomeAnimations = [
   trigger('fadeIn', [
@@ -22,42 +22,4 @@ export const HomeAnimations = [
       transition('* => out', animate(timing)),
     ]
   ),
-  trigger('slideUp', [
-    state('void', style({})),
-
-    state('out', style({
-      width: '106vw',
-      height: '26vh',
-      top: '-13vh',
-      left: '-4vw',
-      transform: 'translateZ(1px) skewY(14deg)',
-      boxShadow: 'none',
-    })),
-
-    transition('* => out', animate(timing)),
-  ]),
-  trigger('slideLeft', [
-    state('void', style({})),
-
-    state('out', style({
-      width: '20vw',
-      height: '27vh',
-      top: '-53vh',
-      left: '0vh',
-      boxShadow: 'none',
-    })),
-
-    transition('* => out', animate(timing)),
-  ]),
-  trigger('slideDown', [
-    state('void', style({})),
-
-    state('out', style({
-      left: '80vw',
-      bottom: '-8vh',
-      boxShadow: 'none',
-    })),
-
-    transition('* => out', animate(timing)),
-  ])
 ];

@@ -1,12 +1,3 @@
-<div class="background-wrapper" #backgroundWrapper>
-  <div class="background-first" [@slideUp]="animationState">
-  </div>
-  <div class="background-second" [@slideDown]="animationState">
-  </div>
-  <div class="background-third" [@slideLeft]="animationState">
-  </div>
-</div>
-
 <div class="content" [@fadeIn]="animationState">
   <div class="photo">
     <img src="assets/laurentbassin.svg" alt="">
@@ -20,10 +11,6 @@
   <div class="start">
     <button (click)="getStartedAction()">Get started</button>
   </div>
-</div>
-
-<div class="body" [ngClass]="{'auto-height': animationState === 'out'}">
-  <app-projects #appProjects></app-projects>
 </div>
 
 <script type="application/ld+json">

@@ -1,7 +1,9 @@
-import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { HomeAnimations } from './home.animation';
 import { Location } from '@angular/common';
 import { ProjectsComponent } from '../projects/projects.component';
+import { BackgroundService } from '../../services/background.service';
+import { Router } from '@angular/router';
 
 @Component({
   templateUrl: 'home.component.html',
@@ -15,23 +17,21 @@ export class HomeComponent implements OnInit {
 
   animationState: string;
 
-  constructor(private location: Location, private renderer: Renderer2) {
+  constructor(private location: Location, private backgroundService: BackgroundService, private router: Router) {
   }
 
   ngOnInit(): void {
+    this.backgroundService.closeBackground();
     this.animationState = '';
   }
 
   getStartedAction(): void {
     this.animationState = 'out';
-    setTimeout(() => {
-      this.appProject.ngOnInit();
-    }, 100);
+    this.backgroundService.openBackground();
 
     setTimeout(() => {
-      this.renderer.setStyle(this.backgroundWrapper.nativeElement, 'opacity', '0');
-    }, 700);
+      this.router.navigate(['/projects']);
+    }, 350);
 
-    this.location.go('/projects');
   }
 }

@@ -1,24 +1,29 @@
-<div class="header">
-  <p>
-    Hello ! Je m'appelle Laurent et je suis un jeune développeur web back-end de {{ age }} ans passionné par la programmation et les nouvelles technologies.
-    J'aime découvrir et apprendre de nouvelles choses au quotidien mais aussi passer du temps pour apporter des solutions à des problèmes rencontrés.
-    C'est pour cette raison que je réalise différents projets sur des thématiques variées.
-  </p>
-</div>
+<app-nav></app-nav>
+<div class="content">
+  <div class="header">
+    <p>
+      Hello ! Je m'appelle Laurent et je suis un jeune développeur web back-end de {{ age }} ans passionné par la
+      programmation et les nouvelles technologies.
+      J'aime découvrir et apprendre de nouvelles choses au quotidien mais aussi passer du temps pour apporter des
+      solutions à des problèmes rencontrés.
+      C'est pour cette raison que je réalise différents projets sur des thématiques variées.
+    </p>
+  </div>
 
-<div class="projects">
-  <app-card *ngFor="let project of projects; let i = index;"
-            [expanded]="expanded == project"
-            [blur]="expanded  && expanded !== project"
-            [project]="project"
-            [@fadeIn]="cardState[i]"
-  >
-    <div (click)="toggleProject(project)">
-      <div class="image-container">
-        <img [src]="project.thumbnail" [alt]="project.name">
+  <div class="projects">
+    <app-card *ngFor="let project of projects; let i = index;"
+              [expanded]="expanded == project"
+              [blur]="expanded  && expanded !== project"
+              [project]="project"
+              [@fadeIn]="cardState[i]"
+    >
+      <div (click)="toggleProject(project)">
+        <div class="image-container">
+          <img [src]="project.thumbnail" [alt]="project.name">
+        </div>
+        <h3>{{ project.name }}</h3>
+        <p>{{ project.caption }}</p>
       </div>
-      <h3>{{ project.name }}</h3>
-      <p>{{ project.caption }}</p>
-    </div>
-  </app-card>
+    </app-card>
+  </div>
 </div>

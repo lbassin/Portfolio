@@ -10,6 +10,9 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { CardComponent } from './components/card/card.component';
 import { ProjectsService } from './services/projects.service';
 import { HttpClientModule } from '@angular/common/http';
+import { BackgroundComponent } from './components/background/background.component';
+import { BackgroundService } from './services/background.service';
+import { NavComponent } from './components/nav/nav.component';
 
 
 @NgModule({
@@ -18,6 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     ProjectsComponent,
     CardComponent,
+    BackgroundComponent,
+    NavComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,6 +32,7 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   providers: [
     ProjectsService,
+    BackgroundService,
   ],
   bootstrap: [AppComponent]
 })

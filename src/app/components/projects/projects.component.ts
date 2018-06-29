@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { IProject } from '../../models/IProject';
 import { ProjectsService } from '../../services/projects.service';
 import { ProjectsAnimations } from './projects.animation';
+import { BackgroundService } from '../../services/background.service';
 
 @Component({
   selector: 'app-projects',
@@ -16,10 +17,11 @@ export class ProjectsComponent implements OnInit {
   expanded: IProject;
   age: any;
 
-  constructor(private projectsService: ProjectsService) {
+  constructor(private projectsService: ProjectsService, private backgroundService: BackgroundService) {
   }
 
   ngOnInit(): void {
+    this.backgroundService.openBackground();
     this.initProjects();
     this.initAge();
   }
