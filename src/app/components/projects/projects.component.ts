@@ -3,6 +3,8 @@ import { IProject } from '../../models/IProject';
 import { ProjectsService } from '../../services/projects.service';
 import { ProjectsAnimations } from './projects.animation';
 import { BackgroundService } from '../../services/background.service';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-projects',
@@ -16,11 +18,19 @@ export class ProjectsComponent implements OnInit {
   projects: Array<IProject>;
   expanded: IProject;
   age: any;
+  routeProject: IProject;
 
-  constructor(private projectsService: ProjectsService, private backgroundService: BackgroundService) {
+  constructor(private projectsService: ProjectsService,
+              private backgroundService: BackgroundService,
+              private route: ActivatedRoute,
+              private location: Location) {
   }
 
   ngOnInit(): void {
+    this.route.data.subscribe((data) => {
+      this.routeProject = data.project;
+    });
+
     this.backgroundService.openBackground();
     this.initProjects();
     this.initAge();
@@ -29,18 +39,20 @@ export class ProjectsComponent implements OnInit {
   toggleProject(project: IProject): void {
     if (this.expanded === project) {
       this.expanded = null;
+      this.location.replaceState('projects');
       return;
     }
 
     if (this.expanded && this.expanded !== project) {
       this.expanded = null;
       setTimeout(() => {
-        this.expanded = project;
+        this.toggleProject(project);
       }, 600);
       return;
     }
 
     this.expanded = project;
+    this.location.replaceState('projects/' + project.url);
   }
 
   private initProjects(): void {
@@ -51,6 +63,12 @@ export class ProjectsComponent implements OnInit {
       this.cardState = [];
       this.projects.forEach((project: IProject, index: number) => {
         this.cardState[index] = 'void';
+
+        if (this.routeProject && project.url === this.routeProject.url) {
+          setTimeout(() => {
+            this.expanded = project;
+          }, 800);
+        }
 
         setTimeout(() => {
           this.cardState[index] = 'show';

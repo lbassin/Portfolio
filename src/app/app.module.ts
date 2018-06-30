@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BackgroundComponent } from './components/background/background.component';
 import { BackgroundService } from './services/background.service';
 import { NavComponent } from './components/nav/nav.component';
+import { ProjectResolve } from './services/project.resolve';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { NavComponent } from './components/nav/nav.component';
   providers: [
     ProjectsService,
     BackgroundService,
+    ProjectResolve,
   ],
   bootstrap: [AppComponent]
 })

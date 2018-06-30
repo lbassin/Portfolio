@@ -4,7 +4,8 @@
 <div class="card-details" *ngIf="expanded" [@expandCard]="expanded" [ngClass]="{'expanded': expanded}" #cardDetail>
   <h4>{{ project.name }}</h4>
   <div class="image-container">
-    <img [src]="project.images[0].path" [alt]="project.images[0].caption" (click)="zoomImage($event)" class="main-image">
+    <img [src]="project.images[0]?.path" [alt]="project.images[0]?.caption" (click)="zoomImage($event)"
+         class="main-image">
     <div class="others">
       <img *ngFor="let image of project.images | slice:1"
            [src]="image.path"
@@ -14,15 +15,9 @@
     </div>
   </div>
   <div class="project-details">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet autem deserunt eaque exercitationem fugiat
-      incidunt, ipsam mollitia nobis quidem repellendus repudiandae saepe sapiente. Ab, doloribus excepturi explicabo
-      mollitia natus velit.
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet autem deserunt eaque exercitationem fugiat
-      incidunt, ipsam mollitia nobis quidem repellendus repudiandae saepe sapiente. Ab, doloribus excepturi explicabo
-      mollitia natus velit.
-    </p>
-    <div>
+    <div [innerHTML]="project.content">
+    </div>
+    <div class="actions">
       <a *ngFor="let link of project.links" [href]="link.url">
         <button>{{ link.label }}</button>
       </a>

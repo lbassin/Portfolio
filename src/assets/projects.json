@@ -3,6 +3,8 @@
     "name": "Djingo Série",
     "thumbnail": "assets/projects/djingo.png",
     "caption": "Chatbot, Angular, Node",
+    "url": "chatbot-djingo",
+    "content": "<p>Projet réalisé au sein d'une équipe de 5 personnes dans le cadre d'un hackathon d'une semaine organisé par le Réseau GES en partenariat avec Orange.</p><p>L'objectif final était de réaliser puis de présenter à Orange un assistant vocale utile pour toute la famille.</p><p>En tant que porteur de l'idée et développeur, j'ai voulu réaliser un assistant vocal permettant de répondre aux questions des utilisateurs sur la thématique des films et séries TV.</p><p>Ce chatbot est capable de répondre à plusieurs questions telles que : <br><i>\"Quels sont les avis sur The Flash ?\"</i><br><i>\"Montre moi le trailer de Infinity War\"</i><br><i>\"Fais moi découvrir une nouvelle série\"</i><br><i>\"Quand sort le prochain épisode de Rick et Morty ?\"</i><br><i>\"Quelles sont les séries similaires à Supernatural ?\"</i></p><p>Le délais de réalisation réduit nous a forcé à réduire le nombre de fonctionnalités. Parmis toutes nos idées, nous avions notamment pensé à ameliorer le chatbot en ajoutant du machine learning afin d'optimiser les suggestions de séries/films faites à l'utilisateur.</p><p><b>Outils utilisés :</b> Angular 5, DataFlow, NodeJS</p>",
     "links": [
       {
         "label": "Client",
@@ -40,6 +42,8 @@
     "name": "Boilerplate",
     "thumbnail": "assets/projects/boilerplate.png",
     "caption": "Electron, Webpack, Angular",
+    "url": "boilerplate-angular-electron",
+    "content": "",
     "links": [
       {
         "label": "Github",
@@ -65,6 +69,8 @@
     "name": "Okty",
     "thumbnail": "assets/projects/okty.png",
     "caption": "Docker, Angular",
+    "url": "okty",
+    "content": "",
     "links": [
       {
         "label": "Github",

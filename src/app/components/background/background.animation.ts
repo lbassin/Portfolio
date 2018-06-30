@@ -27,9 +27,9 @@ export const BackgroundAnimations = [
   trigger('slideLeft', [
     state('void', style({
       width: '100vw',
-      height: '100vh',
+      height: '105vh',
       top: '0',
-      left: '0',
+      left: '0vw',
     })),
 
     state('out', style({
@@ -44,7 +44,7 @@ export const BackgroundAnimations = [
   ]),
   trigger('slideDown', [
     state('void', style({
-      left: '22vw',
+      left: '21vw',
       bottom: '0',
     })),
 

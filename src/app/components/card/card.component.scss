@@ -152,11 +152,11 @@
     position: relative;
     padding-bottom: 52px;
 
-    p {
+    /deep/ p {
       padding: 12px;
     }
 
-    div {
+    div.actions {
       position: absolute;
       bottom: 6px;
       right: 6px;
