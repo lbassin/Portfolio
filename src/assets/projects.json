@@ -43,7 +43,7 @@
     "thumbnail": "assets/projects/boilerplate.png",
     "caption": "Electron, Webpack, Angular",
     "url": "boilerplate-angular-electron",
-    "content": "",
+    "content": "<p>Après la découverte de webpack, accompagné d'un deuxième développeur, nous avons décidé d'apprendre plus en détail le fonctionnement de ce dernier.</p><p>Nous nous sommes donc fixé un objectif : Integrer Angular dans une application Electron à l'aide de Webpack et offrir la possibilité de packager l'application dans un executable ou un installer</p><p>Ce projet nous à permit d'acquerir de nombreuses connaisances dans l'environnement Javascript et nous a apporté une meilleure comprehension des outils tels que Webpack et du fonctionnement d'Angular.</p><p>Le second objectif de cette réalisation était le développement de notre premier projet open source. Nous avons pu echanger avec d'autres développeurs interessé par l'association d'Angular et de Electron.</p><p>Le côté open source est très enrichisant car nous avons reçu des conseils de personnes possédant plus d'experience sur ces outils.</p><p><b>Outils utilisés :</b> Angular, Electron, Webpack</p>",
     "links": [
       {
         "label": "Github",
