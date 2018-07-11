@@ -7,10 +7,3 @@ before_script:
 
 script:
 - "./node_modules/.bin/ng build --prod --aot"
-
-deploy:
-  on:
-    branch: master
-  provider: firebase
-  skip-cleanup: true
-  project: "portfolio-4f023"
