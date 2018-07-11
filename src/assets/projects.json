@@ -13,28 +13,24 @@
       {
         "label": "Serveur",
         "url": "https://github.com/lbassin/ESGI4_Hackathon_Server"
-      },
-      {
-        "label": "Demo",
-        "url": "#"
       }
     ],
     "images": [
       {
         "path": "assets/projects/djingo/djingo_01.jpg",
-        "caption": "Altenative texte"
+        "caption": "Screenshot djingo"
       },
       {
         "path": "assets/projects/djingo/djingo_02.jpg",
-        "caption": "Altenative texte"
+        "caption": "Screenshot djingo"
       },
       {
         "path": "assets/projects/djingo/djingo_03.jpg",
-        "caption": "Altenative texte"
+        "caption": "Screenshot djingo"
       },
       {
         "path": "assets/projects/djingo/djingo_04.jpg",
-        "caption": "Altenative texte"
+        "caption": "Screenshot djingo"
       }
     ]
   },
@@ -53,15 +49,15 @@
     "images": [
       {
         "path": "assets/projects/boilerplate/boilerplate_01.jpg",
-        "caption": "Alternative texte"
+        "caption": "Screenshot du readme"
       },
       {
         "path": "assets/projects/boilerplate/boilerplate_02.jpg",
-        "caption": "Alternative texte"
+        "caption": "Demonstration du boilerplate"
       },
       {
         "path": "assets/projects/boilerplate/boilerplate_03.jpg",
-        "caption": "Alternative texte"
+        "caption": "Screenshot des commandes"
       }
     ]
   },
@@ -70,17 +66,38 @@
     "thumbnail": "assets/projects/okty.png",
     "caption": "Docker, Angular",
     "url": "okty",
-    "content": "",
+    "content": "<p>Okty est un projet open source permettant la création d'un environnement docker correspondant à chaqueprojet.</p><p>L'objectif premier de cette plateforme est d'offrir le plus de personnalisation possible aux développeurs afin de pouvoir se concentrer sur le développement et de ne pas perdre de temps à créer manuellement des images spécifiques pour chaque projet.</p><p>Okty offre une interface de configuration simple, intuitive et accessible à tous. <br>De nombreux containers sont disponibles (MySQL, PHP, Node, MongoDB, ...).</p>",
     "links": [
       {
         "label": "Github",
-        "url": "https://github.com/lbassin/okty"
+        "url": "https://github.com/okty-io/okty"
       },
       {
         "label": "Demo",
         "url": "https://okty.io/"
       }
     ],
-    "images": []
+    "images": [
+      {
+        "path": "assets/projects/okty/okty_home.png",
+        "caption": "Page d'accueil de okty"
+      },
+      {
+        "path": "assets/projects/okty/okty_templates.png",
+        "caption": "Creation depuis un template"
+      },
+      {
+        "path": "assets/projects/okty/okty_containers.png",
+        "caption": "Liste des containers"
+      },
+      {
+        "path": "assets/projects/okty/okty_setup.png",
+        "caption": "Configuration container docker"
+      },
+      {
+        "path": "assets/projects/okty/okty_github.png",
+        "caption": "Organisation github"
+      }
+    ]
   }
 ]
