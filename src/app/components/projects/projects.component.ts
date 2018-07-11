@@ -14,6 +14,7 @@ import { Location } from '@angular/common';
 })
 export class ProjectsComponent implements OnInit {
 
+  headerState: string;
   cardState: Array<string>;
   projects: Array<IProject>;
   expanded: IProject;
@@ -31,6 +32,7 @@ export class ProjectsComponent implements OnInit {
       this.routeProject = data.project;
     });
 
+    this.headerState = 'show';
     this.backgroundService.openBackground();
     this.initProjects();
     this.initAge();

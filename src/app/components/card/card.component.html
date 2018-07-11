@@ -15,8 +15,7 @@
     </div>
   </div>
   <div class="project-details">
-    <div [innerHTML]="project.content">
-    </div>
+    <div [innerHTML]="project.content"></div>
     <div class="actions">
       <a *ngFor="let link of project.links" [href]="link.url">
         <button>{{ link.label }}</button>

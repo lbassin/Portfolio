@@ -16,9 +16,9 @@ export const BackgroundAnimations = [
     state('out', style({
       width: '106vw',
       height: '26vh',
-      top: '-13vh',
+      top: '-16vh',
       left: '-4vw',
-      transform: 'translateZ(1px) skewY(16deg)',
+      transform: 'translateZ(1px) skewY(20deg)',
       boxShadow: 'none',
     })),
 
@@ -33,9 +33,9 @@ export const BackgroundAnimations = [
     })),
 
     state('out', style({
-      width: '20vw',
+      width: '80vw',
       height: '27vh',
-      top: '-35vh',
+      top: '-40vh',
       left: '0vh',
       boxShadow: 'none',
     })),
