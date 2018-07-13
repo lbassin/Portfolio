@@ -14,6 +14,7 @@ import { BackgroundComponent } from './components/background/background.componen
 import { BackgroundService } from './services/background.service';
 import { NavComponent } from './components/nav/nav.component';
 import { ProjectResolve } from './services/project.resolve';
+import { NgxJsonLdModule } from '@ngx-lite/json-ld';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { ProjectResolve } from './services/project.resolve';
     BrowserAnimationsModule,
     RouterModule.forRoot(routes),
     HttpClientModule,
+    NgxJsonLdModule,
   ],
   providers: [
     ProjectsService,

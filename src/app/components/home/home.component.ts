@@ -16,6 +16,7 @@ export class HomeComponent implements OnInit {
   @ViewChild('appProjects') appProject: ProjectsComponent;
 
   animationState: string;
+  schema: any;
 
   constructor(private location: Location, private backgroundService: BackgroundService, private router: Router) {
   }
@@ -23,6 +24,21 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.backgroundService.closeBackground();
     this.animationState = '';
+
+    this.schema = {
+      '@context': 'http://schema.org',
+      '@type': 'Person',
+      'address': {
+        '@type': 'PostalAddress',
+        'addressCountry': 'France',
+        'addressLocality': 'Paris'
+      },
+      'email': 'mailto:laurent@bassin.info',
+      'image': 'https://laurentbassin.fr/assets/laurentbassin.svg',
+      'jobTitle': 'Développeur Web Back-End',
+      'name': 'Laurent Bassin',
+      'url': 'https://laurentbassin.fr/'
+    };
   }
 
   getStartedAction(): void {
