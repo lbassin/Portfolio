@@ -4,7 +4,7 @@ import { Location } from '@angular/common';
 import { ProjectsComponent } from '../projects/projects.component';
 import { BackgroundService } from '../../services/background.service';
 import { Router } from '@angular/router';
-import { Meta } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   templateUrl: 'home.component.html',
@@ -19,7 +19,11 @@ export class HomeComponent implements OnInit {
   animationState: string;
   schema: any;
 
-  constructor(private location: Location, private backgroundService: BackgroundService, private router: Router, private meta: Meta) {
+  constructor(private location: Location,
+              private backgroundService: BackgroundService,
+              private router: Router,
+              private meta: Meta,
+              private title: Title) {
   }
 
   ngOnInit(): void {
@@ -47,6 +51,8 @@ export class HomeComponent implements OnInit {
       'et les nouvelles technologies. J\'aime découvrir et apprendre de nouvelles choses au quotidien mais aussi passer du temps pour ' +
       'apporter des solutions à des problèmes rencontrés.'
     });
+
+    this.title.setTitle('Développeur Web Full-stack - Laurent Bassin');
   }
 
   getStartedAction(): void {
